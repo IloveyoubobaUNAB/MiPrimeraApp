@@ -9,14 +9,13 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index() {
-    // Creamos un producto manual para que la página no esté vacía
-
-    $productList = [
+        $productList = [
         (object)[
+            'id' => 1, // <--- AGREGA ESTO
             'nombre' => 'Chaqueta de Cuero',
             'precio' => 250000,
             'description' => 'Chaqueta de cuero auténtico',
-            'image' => 'ChaquetaCuero.jpg' // El nombre que le pusiste a tu foto
+            'image' => 'ChaquetaCuero.jpg' // Asegúrate que diga 'image' o 'imagen' según tu vista
         ]
     ];
 

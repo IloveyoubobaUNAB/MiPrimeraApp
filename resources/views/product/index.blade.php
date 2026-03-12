@@ -19,13 +19,33 @@
   <div class="grid" id="grid">
 
     @foreach ($misProductos as $product)
-      <div class="card product-card">
-      <a class="card-img" href="/product/101">
-        @if ($product->image)
-          <img src="{{ asset('storage/'. $product->image) }}" alt = "">
-        @else
-          <img src="{{ asset('img/ChaquetaCuero.jpg') }}" alt="Chaqueta de Cuero">
-        @endif
+    <div class="card product-card">
+        <a class="card-img" href="/product/{{ $product->id }}">
+            @if ($product->image)
+                {{-- Esta es la línea clave para la imagen --}}
+                <img src="{{ asset('img/' . $product->image) }}" alt="{{ $product->name }}">
+            @else
+                <img src="https://via.placeholder.com/150" alt="Sin imagen">
+            @endif
+        </a>
+        
+        <div class="card-body">
+            <div class="card-meta">
+                <span>ID: {{ $product->id }}</span>
+                <span class="badge active">Activo</span>
+            </div>
+            
+            <a class="card-name" href="/product/{{ $product->id }}">{{ $product->name }}</a>
+            <p class="card-desc">{{ $product->description }}</p>
+            <div class="card-price">${{ number_format($product->price, 0, ',', '.') }}</div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn-add">Agregar</button>
+            <a href="/product/{{ $product->id }}" class="btn-view">Ver</a>
+        </div>
+    </div>
+@endforeach
         
       </a>
       <div class="card-body">

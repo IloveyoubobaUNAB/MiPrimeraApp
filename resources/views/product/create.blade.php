@@ -14,7 +14,14 @@
       <div class="form-grid">
 
         <div class="form-group">
-          <label>Categoria</label>
+          <label for="nombre"> Nombre del Producto</label>
+          <input type="text" id="nombre" planceholder="99,99">
+          @error('precio')
+          <span style = "color: red; font size: 14px"
+          {{$message}}
+        </span>
+          @enderror
+          <div>
           <select name="estado" required>
             @foreach ($categoryList as $category)
               <option value="{{ $category->id }}">{{ $category->name }}</option>                

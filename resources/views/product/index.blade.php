@@ -41,6 +41,7 @@
 
             <div class="card-footer">
                 <button class="btn btn-primary">Agregar</button>
+                <button class="btn btn-primary">Eliminar</button>
                 <a href="/product/{{ $product->id }}" class="btn btn-ghost">Ver</a>
             </div>
         </div>

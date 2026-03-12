@@ -46,10 +46,10 @@ class ProductController extends Controller
             "descripcion" => "required",
             "imagen" => "required|image",
             "categoria" => "required|exists: categories, id"
-        ])
+        ]);
 
          //dd($request->all());
-
+        
         $newProduct = new Product();
         $newProduct->name = $request->get('nombre');
         $newProduct->description = $request->get('descripcion');
@@ -70,5 +70,12 @@ class ProductController extends Controller
 
     public function show($producto){
         return view('product.show');
+
+
+        public function destroy(Product $product){
+            $product->delete();
+            return redirect()->route("product.index")
+
+        }
     }
 }

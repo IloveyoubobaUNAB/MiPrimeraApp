@@ -8,7 +8,7 @@
 
   <div class="header-row">
     <div>
-      <h2>Productos Tecnológicos</h2>
+      <h2>Productos Para Vestir Bien</h2>
       <p class="small">Clic en el nombre o imagen para ver detalles.</p>
     </div>
     <div class="tools">

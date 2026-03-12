@@ -13,15 +13,15 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="logo">
-      <div class="logo-badge">🛒</div>
+      <div class="logo-badge">🤑</div>
       <div>
-        <div>TechMarket</div>
-        <div style="font-size:12px;">Tu súper de tecnología</div>
+        <div>Leather Drop</div>
+        <div style="font-size:12px;">La tienda que necesitas</div>
       </div>
     </div>
 
     <nav class="nav-links">
-      <a href="/product/">Inicio</a>
+      <a href="/product/">Tienda</a>
       <a href="/product/create">Crear Producto</a>
     </nav>
 

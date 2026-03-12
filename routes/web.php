@@ -1,6 +1,23 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/formulario', function () {
+    return view('form');
+})->name('contact.show');
+
+Route::post('/formulario', function (Request $request) {
+    $request->validate();
+})->name('contact.send');
+
+
+Route::get('/contacto', function (Request $request) {
+    echo "<pre>";
+    print_r($request->get('email'));
+    print_r($request->get('mensaje'));
+    echo "</pre>";
+});
 
 // Esta es la ruta que viste en tu clase
 Route::get('/php-basico', function () {

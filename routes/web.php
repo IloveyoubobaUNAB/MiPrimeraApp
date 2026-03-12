@@ -8,7 +8,12 @@ Route::get('/formulario', function () {
 })->name('contact.show');
 
 Route::post('/formulario', function (Request $request) {
-    $request->validate();
+    $request->validate([
+        'email'   => 'required|email|max:255',
+        'mensaje' => 'required|string|min:10|max:1000',
+    ]);
+
+    return redirect('/formulario')->with('success', '¡Mensaje enviado!');
 })->name('contact.send');
 
 

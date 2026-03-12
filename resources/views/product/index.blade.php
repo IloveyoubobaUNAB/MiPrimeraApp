@@ -24,7 +24,7 @@
         @if ($product->image)
           <img src="{{ asset('storage/'. $product->image) }}" alt = "">
         @else
-          <img src="https://media.istockphoto.com/id/846183008/es/vector/%C3%ADcono-de-perfil-de-avatar-por-defecto-marcador-de-posici%C3%B3n-de-foto-gris.jpg?s=612x612&w=0&k=20&c=CLZoOwpSgoDpY_4ELU9OaY23p0B0mwjXCfbiyc7g9u4=" alt = "">
+          <img src="{{ asset('img/ChaquetaCuero.jpg') }}" alt="Chaqueta de Cuero">
         @endif
         
       </a>

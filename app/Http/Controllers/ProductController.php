@@ -8,15 +8,22 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index(){
+    public function index() {
+    // Creamos un producto manual para que la página no esté vacía
 
+    $productList = [
+        (object)[
+            'nombre' => 'Chaqueta de Cuero',
+            'precio' => 250000,
+            'description' => 'Chaqueta de cuero auténtico',
+            'image' => 'ChaquetaCuero.jpg' // El nombre que le pusiste a tu foto
+        ]
+    ];
 
-        $productList =Product::limit(10)->orderBy('id', 'desc')->get();
-        return view('product.index', [
+    return view('product.index', [
         'misProductos' => $productList
-        ]);   
-    }
-
+    ]);
+}
     public function create(){
 
         $categoryList = Category::all();
